@@ -1,0 +1,162 @@
+src/components/Hero.tsx:157:              transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale(1.02)`,
+src/components/QuotationDashboard.tsx:235:        description: `${item.name} (${item.unitPrice} per ${item.unit})`,
+src/components/QuotationDashboard.tsx:363:        const generatedNum = `Q-2026-${String(distinctNumbers + 1).padStart(4, '0')}`;
+src/components/QuotationDashboard.tsx:406:        alert(`Quote accepted! The linked deal has been automatically marked as 'Won' with a value of R ${quote.total.toLocaleString('en-ZA')}.`);
+src/components/QuotationDashboard.tsx:484:    docPdf.text(`Quote Number: ${quote.quoteNumber}`, 20, 64);
+src/components/QuotationDashboard.tsx:485:    docPdf.text(`Document Version: V${quote.version}`, 20, 70);
+src/components/QuotationDashboard.tsx:486:    docPdf.text(`Created On: ${new Date(quote.createdAt).toLocaleDateString()}`, 20, 76);
+src/components/QuotationDashboard.tsx:489:    docPdf.text(`Valid Until: ${new Date(quote.validUntil).toLocaleDateString()}`, 110, 64);
+src/components/QuotationDashboard.tsx:490:    docPdf.text(`Created By: ${quote.createdByEmail || 'Authorized Agent'}`, 110, 70);
+src/components/QuotationDashboard.tsx:491:    docPdf.text(`Status Claim: ${quote.status.toUpperCase()}`, 110, 76);
+src/components/QuotationDashboard.tsx:500:    docPdf.text(`Customer Name: ${client ? client.name : 'N/A'}`, 14, 99);
+src/components/QuotationDashboard.tsx:501:    docPdf.text(`Industry / Sector: ${client ? client.industry : 'N/A'}`, 14, 105);
+src/components/QuotationDashboard.tsx:502:    docPdf.text(`Registered Address: ${client ? client.address : 'N/A'}`, 14, 111);
+src/components/QuotationDashboard.tsx:503:    docPdf.text(`Corporate Tax ID: ${client ? client.taxNumber : 'N/A'}`, 14, 117);
+src/components/QuotationDashboard.tsx:538:      docPdf.text(`${item.discountPercent}%`, 166, currentY + 5.5);
+src/components/QuotationDashboard.tsx:549:    docPdf.text(`R ${quote.subtotal.toLocaleString('en-ZA')}`, 165, currentY + 6);
+src/components/QuotationDashboard.tsx:551:    docPdf.text(`VAT (${quote.taxPercent}%):`, 110, currentY + 12);
+src/components/QuotationDashboard.tsx:552:    docPdf.text(`R ${quote.taxAmount.toLocaleString('en-ZA')}`, 165, currentY + 12);
+src/components/QuotationDashboard.tsx:556:    docPdf.text(`R ${quote.total.toLocaleString('en-ZA')}`, 165, currentY + 19);
+src/components/QuotationDashboard.tsx:575:    docPdf.save(`Quotation_${quote.quoteNumber}_V${quote.version}.pdf`);
+src/components/QuotationDashboard.tsx:713:                      className={`hover:bg-slate-50/50 transition-colors cursor-pointer ${!q.isLatest ? 'opacity-60 bg-slate-50/30' : ''}`}
+src/components/QuotationDashboard.tsx:738:                        <span className={`px-2.5 py-1 text-[9px] font-black uppercase tracking-wider rounded-full border ${
+src/components/QuotationDashboard.tsx:801:                  {isEditing ? `Edit & Build New Version of ${quoteToEdit?.quoteNumber} (Currently V${quoteToEdit?.version})` : 'Create Corporate Commercial Quote'}
+src/components/QuotationDashboard.tsx:1262:                    <span className={`px-2 py-0.5 text-[9px] font-black rounded-full uppercase ${
+src/components/QuotationDashboard.tsx:1325:                            className={`w-full p-2.5 rounded-xl border text-left text-xs flex justify-between items-center transition-all ${
+src/components/CatalogDashboard.tsx:391:      handleFirestoreError(err, editingItem ? OperationType.UPDATE : OperationType.CREATE, editingItem ? `catalog/${editingItem.id}` : 'catalog');
+src/components/CatalogDashboard.tsx:407:      handleFirestoreError(err, OperationType.UPDATE, `catalog/${item.id}`);
+src/components/CatalogDashboard.tsx:615:                    className={`hover:bg-slate-50/50 transition-colors ${!item.active ? 'opacity-65 bg-slate-50/20' : ''}`}
+src/components/CatalogDashboard.tsx:634:                      <span className={`px-2.5 py-1 text-[9px] font-black uppercase tracking-wider rounded-full border ${
+src/components/CatalogDashboard.tsx:662:                      <span className={`px-1.5 py-0.5 rounded text-[9px] font-black ${
+src/components/CatalogDashboard.tsx:786:                      className={`py-2 text-center rounded-lg font-bold transition-all cursor-pointer ${
+src/components/CatalogDashboard.tsx:797:                      className={`py-2 text-center rounded-lg font-bold transition-all cursor-pointer ${
+src/components/Header.tsx:33:      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b border-outline-variant/10 ${
+src/components/TargetsDashboard.tsx:98:    return `${d.getFullYear()}-${mm}`;
+src/components/TargetsDashboard.tsx:106:    return `${d.getFullYear()}-Q${q}`;
+src/components/TargetsDashboard.tsx:114:    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-01`;
+src/components/TargetsDashboard.tsx:119:    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${lastDay}`;
+src/components/TargetsDashboard.tsx:152:          headers: { 'Authorization': `Bearer ${idToken}` }
+src/components/TargetsDashboard.tsx:217:      qVal === '1' ? `${year}-01` : qVal === '2' ? `${year}-04` : qVal === '3' ? `${year}-07` : `${year}-10`,
+src/components/TargetsDashboard.tsx:218:      qVal === '1' ? `${year}-02` : qVal === '2' ? `${year}-05` : qVal === '3' ? `${year}-08` : `${year}-11`,
+src/components/TargetsDashboard.tsx:219:      qVal === '1' ? `${year}-03` : qVal === '2' ? `${year}-06` : qVal === '3' ? `${year}-09` : `${year}-12`
+src/components/TargetsDashboard.tsx:225:    if (periodType === 'quarter') return `${selectedQuarterYear}-Q${selectedQuarterNum}`;
+src/components/TargetsDashboard.tsx:238:      const qKey = `${selectedQuarterYear}-Q${selectedQuarterNum}`;
+src/components/TargetsDashboard.tsx:287:        currentMonthStr = `${nextDate.getFullYear()}-${String(nextDate.getMonth() + 1).padStart(2, '0')}`;
+src/components/TargetsDashboard.tsx:338:      : `${formQuarterYear}-Q${formQuarterNum}`;
+src/components/TargetsDashboard.tsx:430:                style={{ width: `${targetPct}%` }}
+src/components/TargetsDashboard.tsx:448:                style={{ width: `${actualPct}%` }}
+src/components/TargetsDashboard.tsx:467:                style={{ width: `${actualPct}%` }}
+src/components/TargetsDashboard.tsx:472:                style={{ width: `${forecastPct}%` }}
+src/components/TargetsDashboard.tsx:548:              className={`px-4 py-2 text-xs uppercase font-black tracking-wider rounded-lg transition-all ${
+src/components/TargetsDashboard.tsx:556:              className={`px-4 py-2 text-xs uppercase font-black tracking-wider rounded-lg transition-all ${
+src/components/TargetsDashboard.tsx:564:              className={`px-4 py-2 text-xs uppercase font-black tracking-wider rounded-lg transition-all ${
+src/components/TargetsDashboard.tsx:686:            <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${
+src/components/TargetsDashboard.tsx:694:              <div className={`text-lg font-black ${
+src/components/TargetsDashboard.tsx:703:                  className={`h-full rounded-full ${
+src/components/TargetsDashboard.tsx:707:                  style={{ width: `${Math.min(activeMetrics.progressPercent, 100)}%` }}
+src/components/TargetsDashboard.tsx:771:                      className={`flex items-center justify-between p-3.5 rounded-2xl border transition-all ${
+src/components/TargetsDashboard.tsx:778:                        <div className={`w-6 h-6 rounded-lg text-[10px] font-black flex items-center justify-center ${
+src/components/TargetsDashboard.tsx:794:                        <span className={`text-xs font-black block ${
+src/components/TargetsDashboard.tsx:890:                      className={`flex-1 py-1.5 text-[10px] font-black uppercase tracking-wider rounded-lg border ${
+src/components/TargetsDashboard.tsx:901:                      className={`flex-1 py-1.5 text-[10px] font-black uppercase tracking-wider rounded-lg border ${
+src/components/Hosting.tsx:81:            <span className={`text-sm font-semibold tracking-wide transition-colors ${billingPeriod === 'monthly' ? 'text-primary' : 'text-on-surface-variant'}`}>
+src/components/Hosting.tsx:89:                className={`absolute top-1 left-1 w-4 h-4 rounded-full bg-primary transition-transform duration-300 ${
+src/components/Hosting.tsx:94:            <span className={`text-sm font-semibold tracking-wide flex items-center gap-1.5 transition-colors ${billingPeriod === 'annually' ? 'text-primary' : 'text-on-surface-variant'}`}>
+src/components/Hosting.tsx:113:                className={`relative bg-white rounded-2xl p-8 border flex flex-col justify-between transition-all duration-300 hover:shadow-2xl ${
+src/components/Hosting.tsx:137:                    <div className={`p-2.5 rounded-xl ${plan.isPopular ? 'bg-primary-container/10 text-primary' : 'bg-surface-container text-on-surface-variant'}`}>
+src/components/Hosting.tsx:146:                    <span className="text-sm font-bold text-on-surface-variant">$</span>
+src/components/Hosting.tsx:176:                    className={`block w-full text-center py-3.5 rounded-xl font-label-md text-xs uppercase tracking-widest font-black transition-all ${
+src/components/ManageUsers.tsx:48:          'Authorization': `Bearer ${idToken}`
+src/components/ManageUsers.tsx:53:        throw new Error(`Failed to fetch: ${response.statusText}`);
+src/components/ManageUsers.tsx:83:          'Authorization': `Bearer ${idToken}`
+src/components/ManageUsers.tsx:208:          <Loader2 className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} /> Sync Live Directory
+src/components/ManageUsers.tsx:315:                            className={`px-3.5 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 transition-all ${
+src/components/Capabilities.tsx:79:              className={`relative px-6 py-2.5 rounded-xl font-label-md text-xs md:text-sm font-semibold tracking-wider transition-all duration-300 ${
+src/components/CustomerPortal.tsx:105:      alert(`Successfully marked proposal as ${status}!`);
+src/components/CustomerPortal.tsx:171:          companyName: user?.displayName ? `${user.displayName.split(' ')[0]}'s Educational Trust` : 'Acme Global Academies',
+src/components/CustomerPortal.tsx:212:        value: `R${newDealValue}`,
+src/components/CustomerPortal.tsx:343:                className={`py-3 border-b-2 transition-all cursor-pointer uppercase tracking-wider ${
+src/components/CustomerPortal.tsx:353:                className={`py-3 border-b-2 transition-all cursor-pointer uppercase tracking-wider ${
+src/components/CustomerPortal.tsx:363:                className={`py-3 border-b-2 transition-all cursor-pointer uppercase tracking-wider ${
+src/components/CustomerPortal.tsx:531:                        className={`p-5 rounded-2xl border border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 transition-all ${
+src/components/CustomerPortal.tsx:538:                              {isStructured ? `${quote.quoteNumber} (Version V${quote.version || 1})` : quote.title}
+src/components/CustomerPortal.tsx:549:                              Cost: <strong className="text-slate-900 font-bold">{isStructured ? `R ${(quote.total || 0).toLocaleString('en-ZA')}` : quote.amount}</strong>
+src/components/CustomerPortal.tsx:563:                          <span className={`px-2.5 py-1 text-[9px] font-black uppercase tracking-wider rounded-full border ${
+src/components/CustomerPortal.tsx:685:              <div className={`p-4 rounded-2xl text-xs flex items-center gap-3 border text-left ${
+src/components/OnboardingForm.tsx:128:      } else if (!/^\d{8,10}$/.test(formData.emisNumber.trim())) {
+src/components/OnboardingForm.tsx:142:      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+src/components/OnboardingForm.tsx:147:      } else if (!/^\+?[\d\s-]{9,15}$/.test(formData.phone.trim())) {
+src/components/OnboardingForm.tsx:261:    downloadAnchor.setAttribute("download", `appulence_onboarding_${formData.schoolName.toLowerCase().replace(/[^a-z0-9]/g, '_') || 'school'}.json`);
+src/components/OnboardingForm.tsx:326:                    style={{ width: `${((currentStep - 1) / (steps.length - 1)) * 100}%` }}
+src/components/OnboardingForm.tsx:351:                        className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs transition-all duration-300 ${
+src/components/OnboardingForm.tsx:361:                      <span className={`text-[11px] font-black uppercase tracking-wider mt-2.5 transition-colors hidden sm:inline-block ${
+src/components/OnboardingForm.tsx:408:                            className={`w-full px-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+src/components/OnboardingForm.tsx:430:                            className={`w-full px-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+src/components/OnboardingForm.tsx:454:                            className={`w-full px-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none ${
+src/components/OnboardingForm.tsx:480:                            className={`w-full px-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+src/components/OnboardingForm.tsx:503:                              className={`w-full pl-11 pr-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+src/components/OnboardingForm.tsx:528:                              className={`w-full pl-11 pr-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+src/components/OnboardingForm.tsx:554:                            className={`w-full pl-11 pr-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+src/components/OnboardingForm.tsx:594:                          className={`p-4 rounded-2xl border cursor-pointer flex gap-4 items-start transition-all duration-200 hover:-translate-y-0.5 ${
+src/components/OnboardingForm.tsx:600:                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+src/components/OnboardingForm.tsx:624:                          className={`p-4 rounded-2xl border cursor-pointer flex gap-4 items-start transition-all duration-200 hover:-translate-y-0.5 ${
+src/components/OnboardingForm.tsx:630:                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+src/components/OnboardingForm.tsx:654:                          className={`p-4 rounded-2xl border cursor-pointer flex gap-4 items-start transition-all duration-200 hover:-translate-y-0.5 ${
+src/components/OnboardingForm.tsx:660:                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+src/components/OnboardingForm.tsx:684:                          className={`p-4 rounded-2xl border cursor-pointer flex gap-4 items-start transition-all duration-200 hover:-translate-y-0.5 ${
+src/components/OnboardingForm.tsx:690:                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+src/components/OnboardingForm.tsx:714:                          className={`p-4 rounded-2xl border cursor-pointer flex gap-4 items-start transition-all duration-200 hover:-translate-y-0.5 ${
+src/components/OnboardingForm.tsx:720:                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+src/components/OnboardingForm.tsx:744:                          className={`p-4 rounded-2xl border cursor-pointer flex gap-4 items-start transition-all duration-200 hover:-translate-y-0.5 ${
+src/components/OnboardingForm.tsx:750:                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+src/components/OnboardingForm.tsx:774:                          className={`p-4 rounded-2xl border cursor-pointer flex gap-4 items-start transition-all duration-200 hover:-translate-y-0.5 ${
+src/components/OnboardingForm.tsx:780:                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
+src/components/OnboardingForm.tsx:841:                                className={`px-5 py-3 rounded-xl border font-label-md text-xs uppercase font-bold tracking-wider transition-all flex items-center gap-2 ${
+src/components/OnboardingForm.tsx:994:                          className={`w-full px-4 py-3 bg-surface-container-low border rounded-xl font-body-md text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${
+src/components/OnboardingForm.tsx:1191:                        downloadAnchor.setAttribute("download", `${sub.schoolName.toLowerCase().replace(/[^a-z0-9]/g, '_')}_manifest.json`);
+src/components/AuthModal.tsx:173:              className={`flex-1 py-2 text-center rounded-lg transition-all ${
+src/components/AuthModal.tsx:187:              className={`flex-1 py-2 text-center rounded-lg transition-all ${
+src/components/CrmDashboard.tsx:188:          headers: { 'Authorization': `Bearer ${idToken}` }
+src/components/CrmDashboard.tsx:293:    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+src/components/CrmDashboard.tsx:357:        content: `Customer account created by ${profile?.name || user?.email}. Initial record synced.`,
+src/components/CrmDashboard.tsx:469:    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+src/components/CrmDashboard.tsx:506:        content: `Added new company contact: ${newContactFirst} ${newContactLast} (${newContactTitle})`,
+src/components/CrmDashboard.tsx:627:          content: `Uploaded attachment: ${file.name} to company document repository.`,
+src/components/CrmDashboard.tsx:973:        <div className={`${selectedCustomerId ? 'lg:col-span-5' : 'lg:col-span-12'} space-y-6 transition-all duration-300`}>
+src/components/CrmDashboard.tsx:1131:                      className={`p-5 transition-all flex justify-between items-center gap-4 cursor-pointer relative overflow-hidden group ${
+src/components/CrmDashboard.tsx:1174:                      <ChevronRight className={`w-4 h-4 text-on-surface-variant/40 transition-transform ${
+src/components/CrmDashboard.tsx:1202:                  className={`px-3.5 py-2 border rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+src/components/CrmDashboard.tsx:1372:                          href={selectedCustomer.website.startsWith('http') ? selectedCustomer.website : `https://${selectedCustomer.website}`}
+src/components/CrmDashboard.tsx:1543:                              className={`p-1.5 border rounded-lg transition-all cursor-pointer ${
+src/components/CrmDashboard.tsx:1549:                              <Star className={`w-3.5 h-3.5 ${c.isPrimary ? 'fill-current' : ''}`} />
+src/components/CrmDashboard.tsx:1583:                  className={`border-2 border-dashed p-4 rounded-2xl flex flex-col items-center justify-center text-center gap-1.5 transition-all relative ${
+src/components/AppDevelopment.tsx:123:                  {learnerCount === 1000 ? '1,000+ (Enterprise)' : `${learnerCount} Learners`}
+src/components/AppDevelopment.tsx:182:              className={`px-5 py-2.5 rounded-lg transition-all ${
+src/components/AppDevelopment.tsx:193:              className={`px-5 py-2.5 rounded-lg transition-all ${
+src/components/AppDevelopment.tsx:219:                    id={`appdev-card-${plan.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+src/components/AppDevelopment.tsx:221:                    className={`relative bg-white rounded-2xl p-8 border flex flex-col justify-between transition-all duration-300 hover:shadow-2xl ${
+src/components/AppDevelopment.tsx:304:                        className={`block w-full text-center py-3 rounded-xl font-label-md text-xs uppercase tracking-widest font-black transition-all ${
+src/components/PipelineDashboard.tsx:179:          headers: { 'Authorization': `Bearer ${idToken}` }
+src/components/PipelineDashboard.tsx:411:      handleFirestoreError(err, editingDeal ? OperationType.UPDATE : OperationType.CREATE, editingDeal ? `deals/${editingDeal.id}` : 'deals');
+src/components/PipelineDashboard.tsx:453:        handleFirestoreError(err, OperationType.UPDATE, `deals/${dealId}`);
+src/components/PipelineDashboard.tsx:532:        handleFirestoreError(err, OperationType.DELETE, `deals/${dealId}`);
+src/components/PipelineDashboard.tsx:602:              {wonDealsCount} ({wonDealsValue > 0 ? `R ${wonDealsValue.toLocaleString('en-ZA', { maximumFractionDigits: 0 })}` : '0.00'})
+src/components/PipelineDashboard.tsx:629:                ? `${Math.round((filteredDeals.filter(d => d.stage === 'Won').length / filteredDeals.length) * 100)}% Win Rate`
+src/components/PipelineDashboard.tsx:695:                className={`flex flex-col min-h-[500px] rounded-3xl border ${border} ${bg} p-4 space-y-4`}
+src/components/PipelineDashboard.tsx:701:                      <span className={`w-2.5 h-2.5 rounded-full ${color}`} />
+src/components/PipelineDashboard.tsx:712:                  <span className={`px-2 py-1 rounded-lg text-[10px] font-black tracking-wide ${text} bg-white/80 shadow-sm border border-outline-variant/5`}>
+src/components/PipelineDashboard.tsx:713:                    R {totalStageValue >= 1000 ? `${Math.round(totalStageValue / 1000)}k` : totalStageValue}
+src/components/PipelineDashboard.tsx:738:                          <div className={`absolute top-0 left-0 w-1 h-full ${color}`} />
+src/components/PipelineDashboard.tsx:899:                            <a href={`mailto:${client.email}`} className="hover:underline">{client.email}</a>
+src/components/PipelineDashboard.tsx:1044:                        className={`p-3.5 bg-white border rounded-xl flex items-start gap-3 transition-colors ${
+src/components/PipelineDashboard.tsx:1059:                            <span className={`px-2 py-0.5 text-[8px] font-black uppercase tracking-wider rounded ${
+src/components/PipelineDashboard.tsx:1074:                          <p className={`text-[11px] leading-relaxed text-slate-800 ${act.completed ? 'line-through text-slate-400' : ''}`}>
+src/components/PipelineDashboard.tsx:1396:                  <a href={`mailto:${focusedCustomer.email}`} className="hover:underline font-bold text-slate-800">{focusedCustomer.email}</a>
+src/components/DashboardLayout.tsx:61:      <aside className={`fixed md:static inset-y-0 left-0 w-64 bg-white border-r border-slate-200 z-30 transform transition-transform duration-300 ease-in-out flex flex-col ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
+src/components/DashboardLayout.tsx:81:              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
+src/components/AILogsDashboard.tsx:110:                          ${lead.status === 'new' ? 'bg-amber-50 text-amber-600 border-amber-200' : 
+src/components/VoiceChat.tsx:29:      const wsUrl = `${protocol}//${window.location.host}/live`;
+src/components/VoiceChat.tsx:176:          <div className={`w-2.5 h-2.5 rounded-full ${isConnected ? 'bg-emerald-500 animate-pulse' : 'bg-red-500'}`} />
+src/components/VoiceChat.tsx:191:              <MessageSquare className={`w-8 h-8 ${isAiSpeaking ? 'text-primary' : 'text-slate-400'}`} />
+src/components/VoiceChat.tsx:210:            className={`mt-4 p-4 rounded-full transition-all flex items-center justify-center shadow-md ${
+src/contexts/AuthContext.tsx:54:            'Authorization': `Bearer ${token}`

@@ -1,0 +1,6 @@
+{
+  "name": "Appulence Tech",
+  "description": "Precision in Strategy, Speed in Technology. Redefining the intersection of Technology and Strategy.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

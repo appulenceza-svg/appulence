@@ -1,0 +1,290 @@
+[
+  {
+    "emisNumber": "440506229",
+    "schoolName": "NAMPO AS/S",
+    "schoolType": "Public",
+    "principalName": "MOFOKENG",
+    "physicalAddress": "Rustig, , , BOTHAVILLE, 9660",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "440506333",
+    "schoolName": "KLEINBROEK PF/S",
+    "schoolType": "Public",
+    "principalName": "GROBLER",
+    "physicalAddress": "Kleinbroekmansfontein (plaas), Dist. Bothaville, Dist. Bothaville, BOTHAVILLE, 9660",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610028",
+    "schoolName": "GUGULETHU P/S",
+    "schoolType": "Public",
+    "principalName": "SEGOPA",
+    "physicalAddress": "1216 Mapohoshe Street, NAMAHADI , NAMAHADI , FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610084",
+    "schoolName": "FALESIZWE S/S",
+    "schoolType": "Public",
+    "principalName": "MOTLOUNG",
+    "physicalAddress": "1221 MABOYA STREET, NAMAHADI, NAMAHADI, FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610088",
+    "schoolName": "RETSHEDISITSWE S/S",
+    "schoolType": "Public",
+    "principalName": "MORAKE",
+    "physicalAddress": "1538 Ext 4 , Qalabotjha Loc , Qalabotjha Loc , VILLIERS, 9840",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610173",
+    "schoolName": "QALABOTJHA S/S",
+    "schoolType": "Public",
+    "principalName": "MASILO",
+    "physicalAddress": "794 Wetsie Street, Qalabotjha, Qalabotjha, VILLIERS, 9840",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610193",
+    "schoolName": "REFENG THABO S/S",
+    "schoolType": "Public",
+    "principalName": "TSIE",
+    "physicalAddress": "702 Mokoena Street, Mafahlaneng, Mafahlaneng, TWEELING, 9820",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610200",
+    "schoolName": "MFUNDO THUTO S/S",
+    "schoolType": "Public",
+    "principalName": "MOTAUNG",
+    "physicalAddress": "4768 Seabata Section, Namahadi, Namahadi, FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610202",
+    "schoolName": "PHOMELLO P/S",
+    "schoolType": "Public",
+    "principalName": "MOTLOUNG",
+    "physicalAddress": "2087 Tsolo Street , Qalabotjha, Qalabotjha, VILLIERS, 9840",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610208",
+    "schoolName": "THUTO-KE-TSELA P/S",
+    "schoolType": "Public",
+    "principalName": "MOKOENA",
+    "physicalAddress": "2333 Sunrise Section, Namahadi, Namahadi, FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610216",
+    "schoolName": "MEDUWANENG P/S",
+    "schoolType": "Public",
+    "principalName": "MAKUE",
+    "physicalAddress": "1210 NAMAHADI , FRANKFORT, FRANKFORT, FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610221",
+    "schoolName": "ZAMALEKA P/S",
+    "schoolType": "Public",
+    "principalName": "MAZIBUKO",
+    "physicalAddress": "731 Mphuthi Street, Qalabotjha Location, Qalabotjha Location, VILLIERS, 9840",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610246",
+    "schoolName": "TSHEDISO XOLANI P/S",
+    "schoolType": "Public",
+    "principalName": "PHAKOE",
+    "physicalAddress": "162 Mokoena Street, Mafahlaneng, Mafahlaneng, TWEELING, 9820",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610263",
+    "schoolName": "POELANO P/S",
+    "schoolType": "Public",
+    "principalName": "MOKOENA",
+    "physicalAddress": "3825 Phahameng , Namahadi , Namahadi , FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610264",
+    "schoolName": "TWEELING C/S",
+    "schoolType": "Public",
+    "principalName": "BRITS",
+    "physicalAddress": "49 PIET RETIEF STREET, , , TWEELING, 9820",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610265",
+    "schoolName": "VILLIERS C/S",
+    "schoolType": "Public",
+    "principalName": "MEYER",
+    "physicalAddress": "Lombaardstraat, , , VILLIERS, 9840",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610266",
+    "schoolName": "WILGERIVIER C/S",
+    "schoolType": "Public",
+    "principalName": "PELSTER",
+    "physicalAddress": "Markstraat, , , FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610358",
+    "schoolName": "TSEBO-ULWAZI S/S",
+    "schoolType": "Public",
+    "principalName": "SEBILOANE",
+    "physicalAddress": "TSEBO - ULWAZI SECONDARY SCHOOL, 1172 MABUYA STREET, 1172 MABUYA STREET, FRANKFORT, 9830",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441610364",
+    "schoolName": "MOHLAKENG P/S",
+    "schoolType": "Public",
+    "principalName": "MOTAUNG",
+    "physicalAddress": "1369 Ext 3, QALABOTJHA, QALABOTJHA, VILLIERS, 9840",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811013",
+    "schoolName": "KRAANVOëLVLAKTE PF/S",
+    "schoolType": "Public",
+    "principalName": "MODISE",
+    "physicalAddress": "46 SCOTT STREET, , , ORANJEVILLE, 1995",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811038",
+    "schoolName": "PHIRIHADI P/S",
+    "schoolType": "Public",
+    "principalName": "RANTSEBE",
+    "physicalAddress": "1002 Leie Street, Phiritona, Phiritona, HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811106",
+    "schoolName": "BHEKILANGA P/S",
+    "schoolType": "Public",
+    "principalName": "TSOTETSI",
+    "physicalAddress": "334 Mbethe Street, Phiritona, Phiritona, HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811147",
+    "schoolName": "SEDIBA-THUTO S/S",
+    "schoolType": "Public",
+    "principalName": "MOKOENA",
+    "physicalAddress": "2285 Kuape Street, Phiritona, Phiritona, HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811155",
+    "schoolName": "KEARABETSWE P/S",
+    "schoolType": "Public",
+    "principalName": "MOJAKI",
+    "physicalAddress": "2240 LENNON STREET, PHIRITONA, PHIRITONA, HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811159",
+    "schoolName": "BOITUMELONG P/S",
+    "schoolType": "Public",
+    "principalName": "MOSIA",
+    "physicalAddress": "35 Cilliers Street , , , HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811178",
+    "schoolName": "METSIMATLE S/S",
+    "schoolType": "Public",
+    "principalName": "TSOTETSI",
+    "physicalAddress": "77 KGOPOLONG STREET, ORANJEVILLE, ORANJEVILLE, ORANJEVILLE, 1995",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811184",
+    "schoolName": "PHITSHANA P/S",
+    "schoolType": "Public",
+    "principalName": "MOKOENA",
+    "physicalAddress": "334 MBETHE STREET, PHIRITONA, PHIRITONA, HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811188",
+    "schoolName": "METSIMAHOLO P/S",
+    "schoolType": "Public",
+    "principalName": "NKHOTHO",
+    "physicalAddress": "77 KGOPOLONG STREET, METSIMAHOLO, METSIMAHOLO, ORANJEVILLE, 1995",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811229",
+    "schoolName": "PHIRITONA S/S",
+    "schoolType": "Public",
+    "principalName": "KOLOKOTO",
+    "physicalAddress": "1003 KGWARE STREET, PHIRITONA, PHIRITONA, HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811261",
+    "schoolName": "SANDERSVILLE C/S",
+    "schoolType": "Public",
+    "principalName": "RUITERS",
+    "physicalAddress": "1 MAIN STREET, SANDERSVILLE, SANDERSVILLE, HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "441811277",
+    "schoolName": "HEILBRON C/S",
+    "schoolType": "Public",
+    "principalName": "KNIGHT",
+    "physicalAddress": "WRIGHTSTRAAT, , , HEILBRON, 9650",
+    "email": "",
+    "phone": ""
+  },
+  {
+    "emisNumber": "442411129",
+    "schoolName": "KWAKWATSI S/S",
+    "schoolType": "Public",
+    "principalName": "MOALUDI",
+    "physicalAddress": "739 CHURCH STREET, KWAKWATSI , KWAKWATSI , KOPPIES, 9540",
+    "email": "",
+    "phone": ""
+  }
+]

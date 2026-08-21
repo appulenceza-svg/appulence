@@ -1,0 +1,139 @@
+{
+  "entities": {
+    "CatalogItem": {
+      "title": "CatalogItem",
+      "description": "Products & Services catalog items used for quotations",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "The product or service name" },
+        "description": { "type": "string", "description": "High-level description of the item" },
+        "type": { "type": "string", "enum": ["product", "service"], "description": "Whether the catalog item is physical goods or billable hours/services" },
+        "sku": { "type": "string", "description": "Stock Keeping Unit code" },
+        "unitPrice": { "type": "number", "description": "Base pricing rate in ZAR / currency" },
+        "unit": { "type": "string", "description": "Billing unit, e.g. hour, month, license, project" },
+        "taxable": { "type": "boolean", "description": "Whether the item is subject to VAT or other corporate taxation" },
+        "active": { "type": "boolean", "description": "Item state toggle. If false, item is flagged inactive but preserved for historic logs" },
+        "category": { "type": "string", "description": "Functional workspace mapping, e.g. Development, Design, Hosting, Consulting" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "type", "unitPrice", "unit", "taxable", "active", "category"]
+    },
+    "Deal": {
+      "title": "Deal",
+      "description": "Sales pipeline deals",
+      "type": "object",
+      "properties": {
+        "customerId": { "type": "string" },
+        "title": { "type": "string" },
+        "stage": { "type": "string", "enum": ["Lead", "Qualified", "Proposal Sent", "Negotiation", "Won", "Lost"] },
+        "value": { "type": "number" },
+        "probability": { "type": "number" },
+        "ownerId": { "type": "string" },
+        "ownerEmail": { "type": "string" },
+        "ownerName": { "type": "string" },
+        "expectedCloseDate": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "lostReason": { "type": "string" }
+      },
+      "required": ["customerId", "title", "stage", "value", "probability", "ownerId", "expectedCloseDate"]
+    },
+    "DealActivity": {
+      "title": "DealActivity",
+      "description": "Sales deal tasks, calls, and email log entries",
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["call", "email", "meeting", "task"] },
+        "notes": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "createdBy": { "type": "string" },
+        "createdByEmail": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["type", "notes", "completed", "createdBy", "createdAt"]
+    },
+    "QuoteLineItem": {
+      "title": "QuoteLineItem",
+      "description": "Individual line item in a Quote",
+      "type": "object",
+      "properties": {
+        "catalogItemId": { "type": "string" },
+        "description": { "type": "string" },
+        "quantity": { "type": "number" },
+        "unitPrice": { "type": "number" },
+        "discountPercent": { "type": "number" }
+      },
+      "required": ["description", "quantity", "unitPrice", "discountPercent"]
+    },
+    "Quote": {
+      "title": "Quote",
+      "description": "Client quotes / proposals",
+      "type": "object",
+      "properties": {
+        "customerId": { "type": "string" },
+        "dealId": { "type": "string" },
+        "quoteNumber": { "type": "string" },
+        "status": { "type": "string", "enum": ["Draft", "Sent", "Accepted", "Rejected", "Expired"] },
+        "lineItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/entities/QuoteLineItem"
+          }
+        },
+        "subtotal": { "type": "number" },
+        "taxPercent": { "type": "number" },
+        "taxAmount": { "type": "number" },
+        "total": { "type": "number" },
+        "notes": { "type": "string" },
+        "validUntil": { "type": "string" },
+        "createdBy": { "type": "string" },
+        "createdByEmail": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "sentAt": { "type": "string", "format": "date-time" },
+        "respondedAt": { "type": "string", "format": "date-time" },
+        "version": { "type": "number" },
+        "isLatest": { "type": "boolean" },
+        "parentQuoteId": { "type": "string" }
+      },
+      "required": ["customerId", "quoteNumber", "status", "lineItems", "subtotal", "taxPercent", "taxAmount", "total", "validUntil", "createdBy", "createdAt", "version", "isLatest"]
+    },
+    "Target": {
+      "title": "Target",
+      "description": "Sales targets and performance quotas for sales representatives and the overall team",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "description": "The UID of the sales representative, or 'team' for company-wide target" },
+        "period": { "type": "string", "description": "The target period, e.g. '2026-07' or '2026-Q3'" },
+        "targetAmount": { "type": "number", "description": "The financial target amount in ZAR / currency" },
+        "createdBy": { "type": "string", "description": "The UID of the admin user who established the target" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "period", "targetAmount", "createdBy", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/catalog/{itemId}": {
+      "schema": "CatalogItem",
+      "description": "Products & Services catalog items"
+    },
+    "/deals/{dealId}": {
+      "schema": "Deal",
+      "description": "Deals in sales pipeline"
+    },
+    "/deals/{dealId}/activities/{activityId}": {
+      "schema": "DealActivity",
+      "description": "Chronological deal activities"
+    },
+    "/quotes/{quoteId}": {
+      "schema": "Quote",
+      "description": "Commercial proposals and quote documents"
+    },
+    "/targets/{targetId}": {
+      "schema": "Target",
+      "description": "Performance targets for reps and the overall team"
+    }
+  }
+}
