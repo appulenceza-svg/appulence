@@ -45,7 +45,8 @@ import {
   where, 
   orderBy, 
   limit, 
-  onSnapshot 
+  onSnapshot,
+  writeBatch
 } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 import { Customer, Contact, Note, CustomerAttachment } from '../types';
@@ -593,24 +594,28 @@ export default function CrmDashboard({ onBack }: CrmDashboardProps) {
     if (!selectedCustomerId) return;
     try {
       const now = new Date().toISOString();
+      const batch = writeBatch(db);
+
       if (!currentPrimaryState) {
         // Demote other primary contacts
         for (const c of contacts) {
           if (c.isPrimary && c.id !== contactId) {
-            await updateDoc(doc(db, 'customers', selectedCustomerId, 'contacts', c.id), {
+            batch.update(doc(db, 'customers', selectedCustomerId, 'contacts', c.id), {
               isPrimary: false
             });
           }
         }
       }
 
-      await updateDoc(doc(db, 'customers', selectedCustomerId, 'contacts', contactId), {
+      batch.update(doc(db, 'customers', selectedCustomerId, 'contacts', contactId), {
         isPrimary: !currentPrimaryState
       });
 
-      await updateDoc(doc(db, 'customers', selectedCustomerId), {
+      batch.update(doc(db, 'customers', selectedCustomerId), {
         lastActivityDate: now
       });
+
+      await batch.commit();
 
     } catch (err) {
       console.error(err);
