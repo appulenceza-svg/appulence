@@ -39,7 +39,7 @@ import {
   addDoc, 
   setDoc, 
   updateDoc, 
-  deleteDoc, 
+  deleteDoc, writeBatch,
   getDocs, 
   query, 
   where, 
@@ -84,13 +84,23 @@ export default function CrmDashboard({ onBack }: CrmDashboardProps) {
       const data = await res.json();
       if (data.schools) {
         let count = 0;
+        let batch = writeBatch(db);
+        let operationCount = 0;
+
         for (const school of data.schools) {
+          if (operationCount >= 450) {
+            await batch.commit();
+            batch = writeBatch(db);
+            operationCount = 0;
+          }
+
           const now = new Date().toISOString();
           const ownerUid = user?.uid || 'system';
           const ownerEmailStr = profile?.email || user?.email || '';
           const ownerNameStr = profile?.name || 'System Admin';
 
-          const docRef = await addDoc(collection(db, 'customers'), {
+          const docRef = doc(collection(db, 'customers'));
+          batch.set(docRef, {
             name: school.schoolName,
             industry: 'Education - ' + school.schoolType,
             address: school.physicalAddress,
@@ -107,13 +117,15 @@ export default function CrmDashboard({ onBack }: CrmDashboardProps) {
             lastActivityDate: now,
             attachments: []
           });
+          operationCount++;
 
           if (school.principalName) {
             const names = school.principalName.trim().split(' ');
             const lastName = names.length > 1 ? names.pop() || '' : school.principalName;
             const firstName = names.length > 0 ? names.join(' ') : 'Principal';
             
-            await addDoc(collection(db, 'customers', docRef.id, 'contacts'), {
+            const contactRef = doc(collection(db, 'customers', docRef.id, 'contacts'));
+            batch.set(contactRef, {
               firstName: firstName || 'Principal',
               lastName: lastName || school.principalName,
               email: school.email || '',
@@ -121,16 +133,25 @@ export default function CrmDashboard({ onBack }: CrmDashboardProps) {
               jobTitle: 'Principal',
               isPrimary: true
             });
+            operationCount++;
           }
 
-          await addDoc(collection(db, 'customers', docRef.id, 'notes'), {
+          const noteRef = doc(collection(db, 'customers', docRef.id, 'notes'));
+          batch.set(noteRef, {
             authorId: ownerUid,
             authorName: ownerNameStr,
             content: `Customer account imported from Schools Database.`,
             createdAt: now
           });
+          operationCount++;
+
           count++;
         }
+
+        if (operationCount > 0) {
+          await batch.commit();
+        }
+
         alert(`Successfully imported ${count} schools.`);
       }
     } catch (e: any) {
