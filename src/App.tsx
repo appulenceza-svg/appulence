@@ -15,7 +15,7 @@ import Chatbot from './components/Chatbot';
 import SMMEPackages from './components/SMMEPackages';
 import WebDevPackages from './components/WebDevPackages';
 import { useAuth } from './contexts/AuthContext';
-import { Loader2, ShieldCheck, Sparkles } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 export default function App() {
   const { user, role, loading } = useAuth();
