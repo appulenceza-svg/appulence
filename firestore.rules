@@ -106,7 +106,9 @@ service cloud.firestore {
 
     // Match support_chats collection
     match /support_chats/{chatId} {
-      allow read, write: if true; // In production this should be restricted, but for the chatbot to work for anonymous users we allow it.
+      allow list: if isAdmin();
+      allow get, create, update: if true;
+      allow delete: if isAdmin();
     }
 
     // Default catch-all rule: Only authenticated users can read/write, and admins can do everything
