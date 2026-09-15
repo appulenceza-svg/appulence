@@ -20,7 +20,9 @@ function getFirebaseAdmin(): App {
         adminApp = initializeApp({
           projectId: "gen-lang-client-0440575936"
         });
-        console.log("Firebase Admin initialized successfully with project ID: gen-lang-client-0440575936");
+        if (process.env.NODE_ENV !== 'production') {
+          console.log("Firebase Admin initialized successfully with project ID: gen-lang-client-0440575936");
+        }
       } catch (err) {
         console.error("Firebase Admin initialization error, trying default init:", err);
         try {
@@ -245,7 +247,9 @@ async function startServer() {
         claims.customerId = customerId;
       }
       await auth.setCustomUserClaims(uid, claims);
-      console.log(`Successfully set claims for ${uid}:`, claims);
+      if (process.env.NODE_ENV !== 'production') {
+        console.log(`Successfully set claims for ${uid}:`, claims);
+      }
 
       // Sync with Firestore collection /users/{uid}
       const userRef = db.collection("users").doc(uid);
@@ -264,7 +268,9 @@ async function startServer() {
       }
 
       await userRef.set(updateData, { merge: true });
-      console.log(`Successfully synced Firestore /users/${uid} with data:`, updateData);
+      if (process.env.NODE_ENV !== 'production') {
+        console.log(`Successfully synced Firestore /users/${uid} with data:`, updateData);
+      }
 
       return res.json({ success: true, message: `User claims set and Firestore updated.`, claims });
     } catch (error: any) {
@@ -342,7 +348,9 @@ async function startServer() {
   }
 
   server.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`Server running on http://localhost:${PORT}`);
+    }
   });
 }
 
