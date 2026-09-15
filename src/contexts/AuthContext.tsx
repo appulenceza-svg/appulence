@@ -46,7 +46,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       // If no custom claim role exists, auto-provision default role
       if (!claimsRole) {
         const defaultRole = currentUser.email === 'appulenceza@gmail.com' ? 'admin' : 'customer';
-        console.log(`No custom claim role found for user, initializing default '${defaultRole}'...`);
         const token = await currentUser.getIdToken();
         const response = await fetch('/api/set-user-claims', {
           method: 'POST',
@@ -67,7 +66,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           idTokenResult = await currentUser.getIdTokenResult(true);
           claimsRole = idTokenResult.claims.role as UserRole | undefined;
           claimsCustomerId = idTokenResult.claims.customerId as string | undefined;
-          console.log("Default claims initialized successfully:", idTokenResult.claims);
         } else {
           console.error("Failed to self-provision default claims");
         }
