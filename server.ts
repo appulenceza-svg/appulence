@@ -227,13 +227,12 @@ async function startServer() {
       // Authorization Logic:
       // 1. A user can set their own role to 'sales_rep' during initial self-onboarding/signup.
       // 2. An user who is already an 'admin' can set any user's role and customerId.
-      // 3. For bootstrapping purposes: the user with email 'appulenceza@gmail.com' or 'demo@appulence.co.za' or containing 'admin' is authorized to set roles/claims.
+      // 3. For bootstrapping purposes: the user with email 'appulenceza@gmail.com' or 'demo@appulence.co.za' is authorized to set roles/claims.
       const isSelfSignup = requesterUid === uid && role === "sales_rep";
       const isRequesterAdmin = decodedToken.role === "admin";
       const isBootstraper = 
         requesterEmail === "appulenceza@gmail.com" || 
-        requesterEmail === "demo@appulence.co.za" || 
-        requesterEmail.toLowerCase().includes("admin");
+        requesterEmail === "demo@appulence.co.za";
 
       if (!isSelfSignup && !isRequesterAdmin && !isBootstraper) {
         return res.status(403).json({ error: "Forbidden: You do not have permissions to set roles or claims." });
@@ -308,8 +307,7 @@ async function startServer() {
       const isRequesterAdmin = decodedToken.role === "admin";
       const isBootstraper = 
         requesterEmail === "appulenceza@gmail.com" || 
-        requesterEmail === "demo@appulence.co.za" || 
-        requesterEmail.toLowerCase().includes("admin");
+        requesterEmail === "demo@appulence.co.za";
 
       if (!isRequesterAdmin && !isBootstraper) {
         return res.status(403).json({ error: "Forbidden: Admins only" });
