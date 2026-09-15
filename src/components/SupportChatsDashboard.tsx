@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { db } from '../lib/firebase';
-import { collection, query, orderBy, onSnapshot, updateDoc, doc, addDoc, getDocs, setDoc } from 'firebase/firestore';
-import { MessageSquare, User, Send, CheckCircle, Clock } from 'lucide-react';
+import { collection, query, orderBy, onSnapshot, updateDoc, doc } from 'firebase/firestore';
+import { MessageSquare, User, Send, CheckCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { useAuth } from '../contexts/AuthContext';
 
