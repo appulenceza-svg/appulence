@@ -104,9 +104,19 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
     setError(null);
     setSuccess(null);
     setIsLoading(true);
+
+    const demoEmail = import.meta.env.VITE_DEMO_EMAIL;
+    const demoPassword = import.meta.env.VITE_DEMO_PASSWORD;
+
+    if (!demoEmail || !demoPassword) {
+      setError('Demo account credentials are not configured.');
+      setIsLoading(false);
+      return;
+    }
+
     try {
       // Use a consistent, simple demo login for convenience
-      await signInWithEmailAndPassword(auth, 'demo@appulence.co.za', 'appulence123');
+      await signInWithEmailAndPassword(auth, demoEmail, demoPassword);
       setSuccess('Logged in as Demo Administrator!');
       setTimeout(() => {
         onClose();
@@ -115,7 +125,7 @@ export default function AuthModal({ isOpen, onClose, initialTab = 'login' }: Aut
       // If demo account doesn't exist, create it on the fly!
       if (err.code === 'auth/invalid-credential' || err.code === 'auth/user-not-found') {
         try {
-          const userCredential = await createUserWithEmailAndPassword(auth, 'demo@appulence.co.za', 'appulence123');
+          const userCredential = await createUserWithEmailAndPassword(auth, demoEmail, demoPassword);
           await updateProfile(userCredential.user, {
             displayName: 'Mohlalifi Samuel (Demo)'
           });
